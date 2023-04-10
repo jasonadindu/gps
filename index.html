@@ -7,6 +7,8 @@
     <meta name="author" content="Jason Adindu" />
     <meta name="keywords" content="" />
     <title>GPS</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="shortcut icon" href="./style/image/icon.png"type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,8 +20,13 @@
     
   <body>
     <header>
+        <h1>User Location</h1>
+        <small>using GPS</small>
 
     </header>
+    <main>
+        <div class="map"></div>
+    </main>
   
   </body>
 </html>
