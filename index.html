@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Jason Adindu" />
-    <meta name="keywords" content="" />
-    <title>GPS</title>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel="shortcut icon" href="./style/image/icon.png"type="image/x-icon"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <link rel="stylesheet" href="./assets/style/index.css" media="all" />
+    <title>GPS Tracking</title>
     <script src="./assets/script/index.js" defer></script>
-    </head>
-    
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+    rel="stylesheet"
+  />
+<script
+id="search-js"
+defer
+src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"
+>
+</script>
+</head>
   <body>
-    <header>
-        <h1>User Location</h1>
-        <small>using GPS</small>
+    <div>
+      <main>
+        <div id='map' class="map"></div>
+      </main>
+      </div>
+      <div class="overlay">
+        <div class="loading"></div>
+      </div>
+    <script>
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    </header>
-    <main>
-        <div class="map"></div>
-    </main>
-  
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    </script>
   </body>
 </html>
-

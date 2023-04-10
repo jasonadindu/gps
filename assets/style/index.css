@@ -1,30 +1,55 @@
+@charset "utf-8";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --app-bg-dark: #1a1924;
+
 }
-body {
-    font-family: sans-serif;
-}
-header {
-    width: 100%;
-    height: 133px;
-    background: linear-gradient(rgb(23,3,138), rgb(16,1,59));
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
-header h1, header small{
-    margin-left: 50px;
-}
+
 main {
-    height: 100%;
-    height: calc(100vh - 133px);
+    min-width: 100%;
+    height: 100vh;
+    display: grid;
 }
 .map {
     width: 100%;
     height: 100%;
+}
+
+
+
+
+
+/* OVERLAY /Splash page */
+
+.overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    min-width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: grid;
+    place-items: center;
+    background-color: var(--app-bg-dark);
+    z-index: 9999;
+}
+
+.overlay .loading {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgb(255 255 255 /0.8);
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: rotate 1.25s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: z 0deg;
+    } to {
+        rotate: z 360deg;
+    }
+}
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+    display: none !important;
 }
